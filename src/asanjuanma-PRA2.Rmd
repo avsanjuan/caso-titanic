@@ -224,14 +224,14 @@ ggplot(data = totalData1[!(is.na(totalData[1:filas,]$Age)),],aes(x=Age,fill=Surv
 ggplot(data = totalData1[!is.na(totalData[1:filas,]$Age),],aes(x=Age,fill=Survived))+
                         geom_histogram(binwidth = 3,position="fill")+ylab("Frecuencia")
 ```
+
 ## Generación del Fichero csv resultante  
 
 Se genera un csv con los datos finales.  
 
-
 ```{r echo=TRUE, message=FALSE, warning=FALSE}
 # Exportamos el dataset final a un fichero cvs :
-write.csv(x = totalData1, file = "../csv/titanic_final.csv", row.names = TRUE) 
+write.csv(x = totalData, file = "../csv/titanic_final.csv", row.names = TRUE) 
 ```
 ### Estructura del fichero resultante  
  
