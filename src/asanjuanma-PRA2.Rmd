@@ -3,8 +3,8 @@ title: 'Limpieza y validación de datos - Práctica 2'
 author: "Autor: Angel Vicente Sanjuan Martin"
 date: "Junio 2021"
 output:
-  pdf_document:
-    highlight: zenburn
+  pdf_document: 
+    fig_width: 4
     toc: yes
   html_document:
     highlight: default
@@ -43,61 +43,68 @@ Los objetivos concretos de esta práctica son:
 * Desarrollar la capacidad de búsqueda, gestión y uso de información y recursos en el ámbito de la ciencia de datos.
 
 ## Descripción de la práctica a realizar
-El objetivo de esta actividad será el tratamiento de un dataset, que puede ser el creado en la práctica 1 o bien cualquier dataset libre disponible en Kaggle (https://www.kaggle.com).
-Algunos ejemplos de dataset con los que podéis trabajar son:
-* Red Wine Quality (https://www.kaggle.com/uciml/red-wine-quality-cortez-et-al-2009)
-* Titanic: Machine Learning from Disaster (https://www.kaggle.com/c/titanic)
-El último ejemplo corresponde a una competición activa de Kaggle de manera que, opcionalmente, podéis aprovechar el trabajo realizado durante la práctica para entrar en esta competición.
-Siguiendo las principales etapas de un proyecto analítico, las diferentes tareas a realizar (y justificar) son las siguientes:
-1. Descripción del dataset. ¿Por qué es importante y qué pregunta/problema pretende responder?
-2. Integración y selección de los datos de interés a analizar.
-3. Limpieza de los datos.
-  3.1. ¿Los datos contienen ceros o elementos vacíos? ¿Cómo gestionarías cada uno de estos casos?
-  3.2. Identificación y tratamiento de valores extremos.
-4. Análisis de los datos.
-  4.1. Selección de los grupos de datos que se quieren analizar/comparar (planificación de los análisis a aplicar).
-  4.2. Comprobación de la normalidad y homogeneidad de la varianza.
-  4.3. Aplicación de pruebas estadísticas para comparar los grupos de datos. En función de los datos y el objetivo del estudio, aplicar pruebas de        contraste de hipótesis, correlaciones, regresiones, etc. Aplicar al menos tres métodos de análisis diferentes.
-5. Representación de los resultados a partir de tablas y gráficas.
-6. Resolución del problema. A partir de los resultados obtenidos, ¿cuáles son las conclusiones? ¿Los resultados permiten responder al problema?
-7. Código: Hay que adjuntar el código, preferiblemente en R, con el que se ha realizado la limpieza, análisis y representación de los datos. Si lo    preferís, también podéis trabajar en Python.
+
+El objetivo de esta actividad será el tratamiento de un dataset, que puede ser el creado en la práctica 1 o bien cualquier dataset libre disponible en Kaggle (https://www.kaggle.com).  
+Algunos ejemplos de dataset con los que podéis trabajar son:  
+* Red Wine Quality (https://www.kaggle.com/uciml/red-wine-quality-cortez-et-al-2009).  
+* Titanic: Machine Learning from Disaster (https://www.kaggle.com/c/titanic).  
+
+El último ejemplo corresponde a una competición activa de Kaggle de manera que, opcionalmente, podéis aprovechar el trabajo realizado durante la práctica para entrar en esta competición.  
+Siguiendo las principales etapas de un proyecto analítico, las diferentes tareas a realizar (y justificar) son las siguientes:  
+1. Descripción del dataset. ¿Por qué es importante y qué pregunta/problema pretende responder?  
+2. Integración y selección de los datos de interés a analizar.  
+3. Limpieza de los datos.  
+    3.1. ¿Los datos contienen ceros o elementos vacíos? ¿Cómo gestionarías cada uno de estos casos?  
+    3.2. Identificación y tratamiento de valores extremos.  
+4. Análisis de los datos.  
+    4.1. Selección de los grupos de datos que se quieren analizar/comparar (planificación de los análisis a aplicar).  
+    4.2. Comprobación de la normalidad y homogeneidad de la varianza.  
+    4.3. Aplicación de pruebas estadísticas para comparar los grupos de datos. En función de los datos y el objetivo del estudio, aplicar pruebas de contraste de hipótesis,             correlaciones, regresiones, etc. Aplicar al menos tres métodos de análisis diferentes.  
+5. Representación de los resultados a partir de tablas y gráficas.  
+6. Resolución del problema. A partir de los resultados obtenidos, ¿cuáles son las conclusiones? ¿Los resultados permiten responder al problema?  
+7. Código: Hay que adjuntar el código, preferiblemente en R, con el que se ha realizado la limpieza, análisis y representación de los datos. Si lo preferís, también podéis trabajar en Python.
 
 ## Recursos
-Los siguientes recursos son de utilidad para la realización de la práctica:
-* Calvo M., Subirats L., Pérez D. (2019). Introducción a la limpieza y análisis de los datos. Editorial UOC.
-* Megan Squire (2015). Clean Data. Packt Publishing Ltd. 
-* Jiawei Han, Micheine Kamber, Jian Pei (2012). Data mining: concepts and techniques. Morgan Kaufmann.
-* Jason W. Osborne (2010). Data Cleaning Basics: Best Practices in Dealing with Extreme Scores. Newborn and Infant Nursing Reviews; 10 (1): pp. 1527-3369 .
-* Peter Dalgaard (2008). Introductory statistics with R. Springer Science & Business Media.
-* Wes McKinney (2012). Python for Data Analysis. O’Reilley Media, Inc.
+
+Los siguientes recursos son de utilidad para la realización de la práctica:  
+* Calvo M., Subirats L., Pérez D. (2019). Introducción a la limpieza y análisis de los datos. Editorial UOC.  
+* Megan Squire (2015). Clean Data. Packt Publishing Ltd.  
+* Jiawei Han, Micheine Kamber, Jian Pei (2012). Data mining: concepts and techniques. Morgan Kaufmann.  
+* Jason W. Osborne (2010). Data Cleaning Basics: Best Practices in Dealing with Extreme Scores. Newborn and Infant Nursing Reviews; 10 (1): pp. 1527-3369 .  
+* Peter Dalgaard (2008). Introductory statistics with R. Springer Science & Business Media.  
+* Wes McKinney (2012). Python for Data Analysis. O’Reilley Media, Inc.  
 * Tutorial de Github https://guides.github.com/activities/hello-world.
 
-## Criterios de evaluación
-Todos los apartados son obligatorios. La ponderación de los ejercicios es la siguiente:
-* Los apartados 1, 2 y 6 valen 0,5 puntos.
-* Los apartados 3, 5 y 7 valen 2 puntos.
-* El apartado 4 vale 2,5 puntos.
-Se valorará la idoneidad de las respuestas, que deberán ser claras y completas. Las diferentes etapas deberán justificarse y acompañarse del código correspondiente. También se valorará la síntesis y claridad, a través del uso de comentarios, del código resultante, así como la calidad de
-los datos finales analizados.
+## Descripción del Dataset
 
-## Formato y fecha de entega
-Durante la semana del 24 al 28 de mayo el grupo podrá entregar al profesor una entrega parcial opcional. Esta entrega parcial es muy recomendable para recibir asesoramiento sobre la práctica y verificar que la dirección tomada es la correcta. Se entregarán comentarios a los estudiantes
-que hayan efectuado la entrega parcial pero no contará para la nota de la práctica. En la entrega parcial los estudiantes deberán entregar por correo electrónico, al profesor encargado del aula, el enlace al repositorio Github con el que hayan avanzado.
+### Nombre  
+test.csv + train.csv  
 
-En referente a la entrega final, hay que entregar un único fichero que contenga el enlace Github, el cual no se podrá modificar posteriormente a la fecha de entrega, donde haya:
-1. Una Wiki con los nombres de los componentes del grupo y una descripción de los ficheros.
-2. Un documento PDF con las respuestas a las preguntas y los nombres de los componentes del grupo. Además, al final del documento, deberá aparecer la siguiente tabla de contribuciones al trabajo, la cual debe firmar cada integrante del grupo con sus iniciales. Las iniciales representan la confirmación de que el integrante ha participado en dicho apartado. Todos los integrantes deben participar en cada apartado, por lo que, idealmente, los apartados deberían estar firmados por todos los integrantes.
-3. Una carpeta con el código generado para analizar los datos.
-4. El fichero CSV con los datos originales.
-5. El fichero CSV con los datos finales analizados.
-Este documento de entrega final de la Práctica 2 se debe entregar en el espacio de Entrega y
-Registro de AC del aula antes de las 23:59 del día 8 de junio. No se aceptarán entregas fuera
-de plazo
+### Tipo  
+Census  
 
+### Tamaño  
+1309 Passengers, 12 Variables
 
+### Descripción Abstracta:  
+The  datasets describes the survival status of individual passengers on the Titanic.  
+The datasets frame does not contain information for the crew, but it does contain actual and estimated ages for almost 80% of the passengers.  
 
+### Descripción de las variables:  
+PassengerId : Body Identification Number  
+Survival : Survival (0 = No; 1 = Yes)  
+Pclass : Passenger Class (1 = 1st; 2 = 2nd; 3 = 3rd)  
+Name : Name  
+Sex : Sex  
+Age : Age  
+Sibsp : Number of Siblings/Spouses Aboard  
+Parch : Number of Parents/Children Aboard  
+Ticket : Ticket Number  
+Fare : Passenger Fare (British pound)  
+Cabin : Cabin  
+Embarked : Port of Embarkation (C = Cherbourg; Q = Queenstown; S = Southampton)
 
-## Procesos de limpieza, vaidación y análisis del conjunto de datos  
+## Procesos de limpieza, validación y análisis del conjunto de datos  
 
 Importar y Visualizar la estructura de los dataset de datos.  
 
@@ -135,7 +142,7 @@ totalData$Age[is.na(totalData$Age)] <- mean(totalData$Age,na.rm=T)
 Discretizamos cuando tiene sentido y en función de cada variable.  
 
 ```{r echo=TRUE, message=FALSE, warning=FALSE}
-# ¿Con qué variables tendría sentido un proceso de discretización?
+# Se buscan las variables con las que tiene sentido el proceso de discretización
 apply(totalData,2, function(x) length(unique(x)))
 
 # Discretizamos las variables con pocas clases
@@ -157,8 +164,9 @@ Nos proponemos analizar las relaciones entre las diferentes variables del conjun
 # Visualizamos la relación entre las variables "sex" y "survival":
 ggplot(data=totalData[1:filas,],aes(x=Sex,fill=Survived))+geom_bar()
 
-# Otro punto de vista. Survival como función de Embarked:
-ggplot(data = totalData[1:filas,],aes(x=Embarked,fill=Survived))+geom_bar(position="fill")+ylab("Frecuencia")
+# Relación Survival como función de Embarked:
+ggplot(data = totalData[1:filas,],aes(x=Embarked,fill=Survived))+
+                    geom_bar(position="fill")+ylab("Frecuencia")
 
 ```
 
@@ -177,7 +185,8 @@ Veamos ahora como en un mismo gráfico de frecuencias podemos trabajar con 3 var
 
 ```{r echo=TRUE, message=FALSE, warning=FALSE}
 # Ahora, podemos dividir el gráfico de Embarked por Pclass:
-ggplot(data = totalData[1:filas,],aes(x=Embarked,fill=Survived))+geom_bar(position="fill")+facet_wrap(~Pclass)
+ggplot(data = totalData[1:filas,],aes(x=Embarked,fill=Survived))+
+                    geom_bar(position="fill")+facet_wrap(~Pclass)
 ```
 
 Comparemos ahora dos gráficos de frecuencias: Survived-SibSp y Survived-Parch
@@ -186,7 +195,8 @@ Comparemos ahora dos gráficos de frecuencias: Survived-SibSp y Survived-Parch
 # Survivial como función de SibSp y Parch
 ggplot(data = totalData[1:filas,],aes(x=SibSp,fill=Survived))+geom_bar()
 ggplot(data = totalData[1:filas,],aes(x=Parch,fill=Survived))+geom_bar()
-# Vemos como las forma de estos dos gráficos es similar. Este hecho nos puede indicar presencia de correlaciones altas.
+# Vemos como las forma de estos dos gráficos es similar. 
+# Este hecho nos puede indicar presencia de correlaciones altas.
 ```
 
 Veamos un ejemplo de construcción de una variable nueva: Tamaño de familia
@@ -196,7 +206,8 @@ Veamos un ejemplo de construcción de una variable nueva: Tamaño de familia
 # Construimos un atributo nuevo: family size.
 totalData$FamilySize <- totalData$SibSp + totalData$Parch +1;
 totalData1<-totalData[1:filas,]
-ggplot(data = totalData1[!is.na(totalData[1:filas,]$FamilySize),],aes(x=FamilySize,fill=Survived))+geom_histogram(binwidth =1,position="fill")+ylab("Frecuencia")
+ggplot(data = totalData1[!is.na(totalData[1:filas,]$FamilySize),],aes(x=FamilySize,fill=Survived))+
+                                    geom_histogram(binwidth =1,position="fill")+ylab("Frecuencia")
 
 # Observamos como familias de entre 2 y 6 miembros tienen más del 50% de posibilidades de supervivencia.  
 ```
@@ -206,7 +217,9 @@ Observamos como el parámetro position="fill" nos da la proporción acumulada de
 
 ```{r echo=TRUE, message=FALSE, warning=FALSE}
 # Survival como función de age:
-ggplot(data = totalData1[!(is.na(totalData[1:filas,]$Age)),],aes(x=Age,fill=Survived))+geom_histogram(binwidth =3)
-ggplot(data = totalData1[!is.na(totalData[1:filas,]$Age),],aes(x=Age,fill=Survived))+geom_histogram(binwidth = 3,position="fill")+ylab("Frecuencia")
+ggplot(data = totalData1[!(is.na(totalData[1:filas,]$Age)),],aes(x=Age,fill=Survived))+
+                                                            geom_histogram(binwidth =3)
+ggplot(data = totalData1[!is.na(totalData[1:filas,]$Age),],aes(x=Age,fill=Survived))+
+                        geom_histogram(binwidth = 3,position="fill")+ylab("Frecuencia")
 ```
 
