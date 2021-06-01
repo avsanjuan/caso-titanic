@@ -10,7 +10,8 @@ La actividad ha sido realizada de manera individual por Angel Vicente Sanjuán M
 * src/asanjuanma-PRA2.Rmd: Es el código escrito en R-Markdown 
 * pdf/asanjuanma-PRA2.pdf: Es el fichero de presentación generado a partir del código fuente por medio de la utilidad Knit de RStudio.
 * csv/test.csv: Conjunto de datos de test obtenidos de https://www.kaggle.com/c/titanic/data
-* csv/train.csv: Conjunto de datos de entrenamiento obtenidos de https://www.kaggle.com/c/titanic/data
+* csv/train.csv: Conjunto de datos de entrenamiento obtenidos de https://www.kaggle.com/c/titanic/data  
+* csv/titanic_final.csv: Conjunto de datos final después del procesado.
 
 ### Recursos ###
 1. https://www.kaggle.com/c/titanic/
